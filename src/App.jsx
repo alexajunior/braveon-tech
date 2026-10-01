@@ -137,7 +137,7 @@ function App() {
   return (
     <div className="app">
       <header className="glass-nav">
-        <a className="wordmark" href="#top" aria-label="Braveon AI home"><img src="/braveon-mark-cropped.png" alt="" /><span>Braveon <b>AI</b></span></a>
+        <a className="wordmark" href="#top" aria-label="Braveon AI home"><img src="/braveon-mark-square.png" alt="" /><span>Braveon <b>AI</b></span></a>
         <nav>{products.map((product) => <a key={product.id} href={`#${product.id}`}>{product.name.replace(".", "")}</a>)}<a href="#labs">Braveon Tech Labs</a></nav>
         <div className="explore-menu" ref={exploreRef}>
           <button className="nav-cta" type="button" aria-expanded={exploreOpen} aria-controls="explore-links" onClick={() => setExploreOpen((open) => !open)}>Explore <Arrow /></button>
@@ -185,7 +185,7 @@ function App() {
           <div className="section-inner"><Reveal><div className="product-label"><span>05</span><span>THE EXPERIMENTAL WING</span></div><h2>Where the next<br /><span>signal begins.</span></h2></Reveal><div className="bento-grid"><Reveal delay={0.05}><article className="bento-card bento-large"><span>BRAVEON TECH LABS / 01</span><h3>Low-level thinking.<br />High-impact systems.</h3><p>C programming, algorithm optimization, and exoskeleton hardware research.</p><i>↗</i><div className="bento-graphic"><span /><span /><span /></div></article></Reveal><Reveal delay={0.1}><article className="bento-card bento-offline"><span>BUILD WITHOUT WIFI / 02</span><h3>Building beyond<br />the signal.</h3><p>The offline-first engineering newsletter.</p><i>↗</i></article></Reveal><Reveal delay={0.15}><article className="bento-card bento-audio"><span>BRAVEON AUDIO / 03</span><h3>Sound for<br />the future.</h3><p>Creative audio engineering and sonic branding.</p><i>↗</i><div className="waveform"><b /><b /><b /><b /><b /><b /><b /><b /><b /></div></article></Reveal></div></div>
         </section>
       </main>
-      <footer><div className="footer-mark"><img src="/braveon-mark-cropped.png" alt="" /></div><p>Braveon AI — Intelligence, aligned.</p><a href="mailto:hello@braveon.ai">Start a conversation <Arrow /></a><small>© 2026 Braveon AI. Built for what&apos;s next.</small></footer>
+      <footer><div className="footer-mark"><img src="/braveon-mark-square.png" alt="" /></div><p>Braveon AI — Intelligence, aligned.</p><a href="mailto:hello@braveon.ai">Start a conversation <Arrow /></a><small>© 2026 Braveon AI. Built for what&apos;s next.</small></footer>
     </div>
   );
 }

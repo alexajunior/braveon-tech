@@ -75,7 +75,7 @@ html, body, .app { background: #ffffff; }
 .wordmark, .glass-nav nav a, .nav-cta { color: #ffffff; }
 .wordmark b, .glass-nav nav a { color: rgba(255,255,255,.72); }
 .wordmark-mark { border-color: rgba(255,255,255,.65); }
-.wordmark > img { width: 32px; height: 38px; object-fit: contain; flex: 0 0 32px; }
+.wordmark > img { width: 38px; height: 38px; border-radius: 8px; object-fit: cover; flex: 0 0 38px; }
 .explore-menu { position: relative; }
 .explore-menu .nav-cta { border: 0; cursor: pointer; }
 .explore-links { position: absolute; top: calc(100% + 12px); right: 0; display: grid; width: 245px; padding: 8px; border: 1px solid rgba(255,255,255,.3); border-radius: 18px; background: rgba(255,48,56,.96); box-shadow: 0 18px 40px rgba(105,16,21,.3); backdrop-filter: blur(18px); }
@@ -124,4 +124,4 @@ html, body, .app { background: #ffffff; }
 .labs-section { background: #ff3038; color: #ffffff; }.labs-section .product-label, .labs-section h2, .labs-section h2 span { color: #ffffff; }.labs-section .product-label { border-top-color: rgba(255,255,255,.45); }.labs-section .product-label span:first-child { color: #111111; }
 .bento-card { border-color: rgba(255,255,255,.4); background: rgba(255,255,255,.13); }.bento-card:hover { border-color: #ffffff; }.bento-card > span, .bento-card p { color: rgba(255,255,255,.75); }.bento-card h3 { color: #ffffff; }.bento-card i { color: #111111; }.bento-large, .bento-offline, .bento-audio { background: rgba(255,255,255,.13); }
 .bento-graphic { border-color: rgba(255,255,255,.65); box-shadow: 0 0 0 28px rgba(255,255,255,.08), 0 0 0 57px rgba(255,255,255,.05); }.bento-graphic span { background: #ffffff; box-shadow: 0 0 12px 3px #ffffff; }.waveform b { background: #111111; }
-footer { border-top-color: rgba(17,17,17,.15); background: #ffffff; color: #555555; }.footer-mark img { width: 54px; height: 66px; object-fit: contain; }.footer-mark { display: flex; align-items: center; } footer a { color: #111111; }
+footer { border-top-color: rgba(17,17,17,.15); background: #ffffff; color: #555555; }.footer-mark img { width: 66px; height: 66px; border-radius: 12px; object-fit: cover; }.footer-mark { display: flex; align-items: center; } footer a { color: #111111; }
