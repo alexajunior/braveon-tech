@@ -142,7 +142,7 @@ function App() {
     const body = encodeURIComponent(
       `Name: ${payload.name}\nEmail: ${payload.email}\nCompany: ${payload.company || "Not provided"}\n\nMessage:\n${payload.message}`,
     );
-    window.location.href = `mailto:hello@braveon.ai?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:alex@onbraveon.tech?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -218,7 +218,7 @@ function App() {
           </div>
         </section>
       </main>
-      <footer><div className="footer-mark"><img src="/braveon-mark-square.png" alt="" /></div><p>Braveon AI — Intelligence, aligned.</p><a href="mailto:hello@braveon.ai">Start a conversation <Arrow /></a><small>© 2026 Braveon AI. Built for what&apos;s next.</small></footer>
+      <footer><div className="footer-mark"><img src="/braveon-mark-square.png" alt="" /></div><p>Braveon AI — Intelligence, aligned.</p><a href="mailto:alex@onbraveon.tech">Start a conversation <Arrow /></a><small>© 2026 Braveon AI. Built for what&apos;s next.</small></footer>
     </div>
   );
 }

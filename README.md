@@ -14,6 +14,6 @@ Build for production with `npm run build`.
 ## Contact form
 
 The contact form is email-only. When someone submits it, their default email
-app opens a prepared draft addressed to `hello@braveon.ai`. The draft includes
+app opens a prepared draft addressed to `alex@onbraveon.tech`. The draft includes
 their name, email, company, and message so they can review the details before
 sending.
