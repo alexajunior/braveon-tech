@@ -134,6 +134,17 @@ function App() {
     return () => document.removeEventListener("pointerdown", closeExplore);
   }, []);
 
+  const submitContact = (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const payload = Object.fromEntries(form.entries());
+    const subject = encodeURIComponent(`Braveon AI enquiry from ${payload.name}`);
+    const body = encodeURIComponent(
+      `Name: ${payload.name}\nEmail: ${payload.email}\nCompany: ${payload.company || "Not provided"}\n\nMessage:\n${payload.message}`,
+    );
+    window.location.href = `mailto:hello@braveon.ai?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="app">
       <header className="glass-nav">
@@ -144,6 +155,7 @@ function App() {
           {exploreOpen && <div className="explore-links" id="explore-links" role="menu">
             {products.map((product) => <a key={product.id} href={`#${product.id}`} role="menuitem" onClick={() => setExploreOpen(false)}><span>{product.index}</span>{product.name.replace(".", "")}<Arrow /></a>)}
             <a href="#labs" role="menuitem" onClick={() => setExploreOpen(false)}><span>05</span>Braveon Tech Labs<Arrow /></a>
+            <a href="#contact" role="menuitem" onClick={() => setExploreOpen(false)}><span>06</span>Contact Braveon AI<Arrow /></a>
           </div>}
         </div>
       </header>
@@ -183,6 +195,27 @@ function App() {
 
         <section className="labs-section" id="labs">
           <div className="section-inner"><Reveal><div className="product-label"><span>05</span><span>THE EXPERIMENTAL WING</span></div><h2>Where the next<br /><span>signal begins.</span></h2></Reveal><div className="bento-grid"><Reveal delay={0.05}><article className="bento-card bento-large"><span>BRAVEON TECH LABS / 01</span><h3>Low-level thinking.<br />High-impact systems.</h3><p>C programming, algorithm optimization, and exoskeleton hardware research.</p><i>↗</i><div className="bento-graphic"><span /><span /><span /></div></article></Reveal><Reveal delay={0.1}><article className="bento-card bento-offline"><span>BUILD WITHOUT WIFI / 02</span><h3>Building beyond<br />the signal.</h3><p>The offline-first engineering newsletter.</p><i>↗</i></article></Reveal><Reveal delay={0.15}><article className="bento-card bento-audio"><span>BRAVEON AUDIO / 03</span><h3>Sound for<br />the future.</h3><p>Creative audio engineering and sonic branding.</p><i>↗</i><div className="waveform"><b /><b /><b /><b /><b /><b /><b /><b /><b /></div></article></Reveal></div></div>
+        </section>
+
+        <section className="contact-section" id="contact">
+          <div className="section-inner contact-layout">
+            <Reveal>
+              <div className="contact-copy">
+                <div className="product-label"><span>06</span><span>START A CONVERSATION</span></div>
+                <h2>Bring us the<br /><span>impossible.</span></h2>
+                <p>Tell us what you are building, what is broken, or what should exist next. We will get back to you shortly.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <form className="contact-form" onSubmit={submitContact}>
+                <label><span>Your name</span><input name="name" type="text" autoComplete="name" placeholder="Jane Doe" required /></label>
+                <label><span>Work email</span><input name="email" type="email" autoComplete="email" placeholder="jane@company.com" required /></label>
+                <label><span>Company <small>optional</small></span><input name="company" type="text" autoComplete="organization" placeholder="Company or organization" /></label>
+                <label><span>How can we help?</span><textarea name="message" rows="4" placeholder="A little context goes a long way." required /></label>
+                <button className="contact-submit" type="submit">Send enquiry <Arrow /></button>
+              </form>
+            </Reveal>
+          </div>
         </section>
       </main>
       <footer><div className="footer-mark"><img src="/braveon-mark-square.png" alt="" /></div><p>Braveon AI — Intelligence, aligned.</p><a href="mailto:hello@braveon.ai">Start a conversation <Arrow /></a><small>© 2026 Braveon AI. Built for what&apos;s next.</small></footer>
