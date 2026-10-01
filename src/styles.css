@@ -75,8 +75,14 @@ html, body, .app { background: #ffffff; }
 .wordmark, .glass-nav nav a, .nav-cta { color: #ffffff; }
 .wordmark b, .glass-nav nav a { color: rgba(255,255,255,.72); }
 .wordmark-mark { border-color: rgba(255,255,255,.65); }
-.logo-crop { display: inline-block; width: 25px; height: 25px; overflow: hidden; border-radius: 50%; flex: 0 0 25px; }
-.wordmark img { width: 25px; height: 25px; object-fit: contain; }
+.wordmark > img { width: 32px; height: 38px; object-fit: contain; flex: 0 0 32px; }
+.explore-menu { position: relative; }
+.explore-menu .nav-cta { border: 0; cursor: pointer; }
+.explore-links { position: absolute; top: calc(100% + 12px); right: 0; display: grid; width: 245px; padding: 8px; border: 1px solid rgba(255,255,255,.3); border-radius: 18px; background: rgba(255,48,56,.96); box-shadow: 0 18px 40px rgba(105,16,21,.3); backdrop-filter: blur(18px); }
+.explore-links a { display: flex; align-items: center; gap: 10px; padding: 11px 10px; border-radius: 10px; color: #ffffff; font-size: 11px; transition: background .2s ease; }
+.explore-links a:hover { background: rgba(255,255,255,.16); }
+.explore-links a span { min-width: 18px; color: rgba(255,255,255,.62); font: 9px "DM Mono", monospace; }
+.explore-links a > span:last-child { margin-left: auto; color: #111111; }
 .nav-cta { background: #ffffff; color: #111111; }
 .hero { background: #ff3038; border-bottom-color: rgba(0,0,0,.12); }
 .hero h1, .hero-content > p, .eyebrow, .hero-footer { color: #ffffff; }
@@ -118,4 +124,4 @@ html, body, .app { background: #ffffff; }
 .labs-section { background: #ff3038; color: #ffffff; }.labs-section .product-label, .labs-section h2, .labs-section h2 span { color: #ffffff; }.labs-section .product-label { border-top-color: rgba(255,255,255,.45); }.labs-section .product-label span:first-child { color: #111111; }
 .bento-card { border-color: rgba(255,255,255,.4); background: rgba(255,255,255,.13); }.bento-card:hover { border-color: #ffffff; }.bento-card > span, .bento-card p { color: rgba(255,255,255,.75); }.bento-card h3 { color: #ffffff; }.bento-card i { color: #111111; }.bento-large, .bento-offline, .bento-audio { background: rgba(255,255,255,.13); }
 .bento-graphic { border-color: rgba(255,255,255,.65); box-shadow: 0 0 0 28px rgba(255,255,255,.08), 0 0 0 57px rgba(255,255,255,.05); }.bento-graphic span { background: #ffffff; box-shadow: 0 0 12px 3px #ffffff; }.waveform b { background: #111111; }
-footer { border-top-color: rgba(17,17,17,.15); background: #ffffff; color: #555555; }.footer-logo-crop { width: 42px; height: 42px; }.footer-logo-crop img { width: 42px; height: 42px; object-fit: contain; }.footer-mark { display: flex; align-items: center; }.footer-mark > span:not(.logo-crop) { display: none; } footer a { color: #111111; }
+footer { border-top-color: rgba(17,17,17,.15); background: #ffffff; color: #555555; }.footer-mark img { width: 54px; height: 66px; object-fit: contain; }.footer-mark { display: flex; align-items: center; } footer a { color: #111111; }
